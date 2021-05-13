@@ -1,0 +1,45 @@
+[
+    {
+        "monthlyPayment":300000,
+        "initialPayment":600000,
+        "description":"tanga amafaranga yu bukode y'amezi abiri ukiyijyamo",
+        "rooms":3,
+        "hasParking":false,
+        "isNearRoad":false,
+        "isAlone":true,
+        "hasElectricity":true,
+        "electricityStatus":"ifite cash power yayo"
+    },
+    {
+        "monthlyPayment":20000,
+        "initialPayment":50000,
+        "description":"tanga amafaranga yu bukode y'amezi abiri ukiyijyamo",
+        "rooms":3,
+        "hasParking":false,
+        "isNearRoad":false,
+        "isAlone":true,
+        "hasElectricity":true,
+        "electricityStatus":"ifite cash power yayo"
+    },
+    {
+        "monthlyPayment":100000,
+        "initialPayment":300000,
+        "description":"tanga amafaranga yu bukode y'amezi abiri ukiyijyamo",
+        "rooms":3,
+        "hasParking":false,
+        "isNearRoad":false,
+        "isAlone":true,
+        "hasElectricity":true,
+        "electricityStatus":"ifite cash power yayo"
+    },{
+        "monthlyPayment":70000,
+        "initialPayment":200000,
+        "description":"tanga amafaranga yu bukode y'amezi abiri ukiyijyamo",
+        "rooms":3,
+        "hasParking":false,
+        "isNearRoad":false,
+        "isAlone":true,
+        "hasElectricity":true,
+        "electricityStatus":"ifite cash power yayo"
+    }
+]
