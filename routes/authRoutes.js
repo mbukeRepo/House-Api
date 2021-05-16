@@ -1,6 +1,7 @@
 const express = require('express');
 const { login,signup } = require('../controllers/authController');
 const router = express.Router();
+const AppError = require('../utils/AppError');
 
 
 // POST /api/v1/login
@@ -12,7 +13,8 @@ router.post('/login', login );
 // POST /api/v1/signup
 // this route is for creating new  user and issuing token(automatic login) 
 
-router.post('/signup', signup );
+router.post('/signup'
+    , signup );
 
 
 module.exports = router;

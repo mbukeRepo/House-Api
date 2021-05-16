@@ -24,8 +24,7 @@ const houseSchema = new schema({
        required:[true,"ese ifite parking"]
    },
    isNearRoad:{
-       type:Boolean,
-       required:[true,"ese yegereye umuhanda"]
+       type:Boolean
    },
    isAlone:{
        type:Boolean,
@@ -36,10 +35,6 @@ const houseSchema = new schema({
     //    required:[true,"garagaza ifoto yayo"]
    },
    otherImages:[String],
-   hasElectricity:{
-       type:Boolean,
-       required:[true,"ese ifite umuriro"]
-   },
    electricityStatus:{
        type:String,
        enum:{

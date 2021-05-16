@@ -9,6 +9,13 @@ const handleCastError = (err) => {
     let message = `Invalid ${err.path} : ${err.value}`
     return new AppError(message,400);
 }
+const handleDuplicationError = err => {
+    let value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0];
+    let message = `Duplicate ${value} please use another email`;
+    return new AppError(message,400);
+}
+const handleExpiredJWT = () => new AppError("Token has expired, please login again",401);
+const handleInvalidToken = () => new AppError("Invalid Token ....",401);
 
 const sendErrorDev = (err,res) => {
     return res.status(err.statusCode).json({
@@ -49,7 +56,15 @@ module.exports = (err,req,res,next) => {
         if(err.name === "CastError"){
             error = handleCastError(err);
         }
-
+        if(err.code === 11000){
+            error = handleDuplicationError(err);
+        }
+        if(err.name === "TokenExpiredError"){
+            error = handleExpiredJWT();
+        }
+        if(err.name === "JsonWebTokenError"){
+            error = handleInvalidToken();
+        }
         sendErrorProd(error,res);
     }
 }
